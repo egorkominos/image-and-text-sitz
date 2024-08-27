@@ -20,17 +20,41 @@
         #image-container {
             position: relative;
             display: inline-block;
+            width: 100%;
+            height: 400px; /* Установите нужную высоту */
         }
         #image {
+            position: absolute;
+            top: 50px; /* Задайте желаемое расстояние от верхнего края */
+            left: 50px; /* Задайте желаемое расстояние от левого края */
             max-width: 100%;
             height: auto;
+        }
+        #button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #button:hover {
+            background-color: darkred;
         }
     </style>
 </head>
 <body>
     <div id="text">TELEPHANT</div>
     <div id="image-container">
-        <img id="image" src="https://ltdfoto.ru/images/2024/08/27/DUROVKA.png" alt="Durovka Image">
+        <img id="image" src="https://ltdfoto.ru/images/2024/08/27/FLAGMAN.png" alt="Flagman Image">
     </div>
+    <button id="button">Click Me!</button>
+    <script>
+        document.getElementById('button').addEventListener('click', function() {
+            alert('Button was clicked!');
+        });
+    </script>
 </body>
 </html>
